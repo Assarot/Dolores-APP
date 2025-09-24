@@ -1,4 +1,4 @@
 package com.example.doloresapp.domain.model;
 
-public class Prueba {
+public class Saem {
 }
