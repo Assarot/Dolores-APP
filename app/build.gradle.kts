@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
-
 android {
     namespace = "com.example.doloresapp"
     compileSdk = 36
@@ -15,7 +14,6 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "BASE_URL", "\"http://192.168.1.4:8090/\"")
     }
 
     buildTypes {
@@ -25,10 +23,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField("String", "BASE_URL", "\"http://192.168.1.4:8090/\"")
         }
         debug {
-            buildConfigField("String", "BASE_URL", "\"http://192.168.1.4:8090/\"")
         }
     }
     compileOptions {
