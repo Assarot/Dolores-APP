@@ -1,4 +1,4 @@
-package com.example.doloresapp.data.datasources.local
+package com.example.doloresapp.data.local
 
 import android.content.Context
 import android.content.SharedPreferences
