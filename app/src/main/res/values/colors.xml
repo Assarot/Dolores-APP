@@ -7,4 +7,7 @@
     <color name="dolores">#3F3F3F</color>
     <color name="gray_light">#E0E0E0</color>
     <color name="transparent">#00000000</color>
+    <color name="dashboard">#E4E4E4</color>
+    <color name="prira">#FBFBFB</color>
+    <color name="ingresa">#1FA0BC</color>
 </resources>

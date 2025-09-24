@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="-1dp">
+    tools:layout_editor_absoluteY="-1dp"
+    >
 
 
     <ImageView
@@ -16,6 +18,7 @@
         tools:layout_editor_absoluteX="-99dp"
         tools:layout_editor_absoluteY="-71dp" />
 
+
     <ImageView
         android:layout_width="135dp"
         android:layout_height="135dp"
@@ -23,6 +26,7 @@
         android:src="@drawable/circle_background"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="-79dp" />
+
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/materialTextView"
@@ -62,6 +66,31 @@
         app:layout_constraintVertical_bias="0.483" />
 
     <ImageView
+        android:id="@+id/mostrador1"
+        android:layout_width="313dp"
+        android:layout_height="44dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bg_remostrador"
+        app:layout_constraintBottom_toTopOf="@+id/acceder_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView2"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <ImageView
+        android:id="@+id/mostrador"
+        android:layout_width="280dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bg_mostrador"
+        app:layout_constraintBottom_toTopOf="@+id/acceder_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mostrador1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
         android:id="@+id/imageView2"
         android:layout_width="147dp"
         android:layout_height="145dp"
@@ -70,8 +99,8 @@
         app:layout_constraintBottom_toTopOf="@+id/acceder_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialTextView2"
-        app:layout_constraintVertical_bias="0.212" />
+        app:layout_constraintTop_toBottomOf="@+id/mostrador1"
+        app:layout_constraintVertical_bias="0.3" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/acceder_button"

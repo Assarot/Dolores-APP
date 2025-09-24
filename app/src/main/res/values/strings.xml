@@ -13,5 +13,9 @@
     <string name="next">Avanza</string>
     <string name="register">Registrate</string>
     <string name="enter">Ingresa</string>
+    <string-array name="gender_options">
+        <item>Femenino</item>
+        <item>Masculino</item>
+    </string-array>
 
 </resources>
