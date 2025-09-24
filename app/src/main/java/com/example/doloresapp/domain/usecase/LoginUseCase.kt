@@ -1,4 +1,4 @@
-package com.example.doloresapp.domain.UseCase
+package com.example.doloresapp.domain.usecase
 
 import com.example.doloresapp.domain.repository.AuthRepository
 

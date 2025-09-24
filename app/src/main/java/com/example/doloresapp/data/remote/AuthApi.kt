@@ -1,4 +1,4 @@
-package com.example.doloresapp.data.datasources.remote
+package com.example.doloresapp.data.remote
 
 import com.example.doloresapp.presentation.viewmodel.AuthRequest
 import com.example.doloresapp.presentation.viewmodel.AuthResponse
