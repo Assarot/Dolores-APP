@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_screen">
+>
 
     <ScrollView
         android:id="@+id/scroll"
@@ -33,7 +33,7 @@
                     android:id="@+id/ivBell"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:tint="@android:color/white"
+
                     android:contentDescription="Notificaciones"
                     android:src="@android:drawable/ic_dialog_info"
                     app:layout_constraintTop_toTopOf="parent"
@@ -44,7 +44,7 @@
                     android:id="@+id/ivLogo"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:tint="@android:color/white"
+
                     android:src="@mipmap/ic_launcher"
                     android:contentDescription="Logo"
                     app:layout_constraintTop_toTopOf="parent"
@@ -112,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="¿Qué Harás Hoy?"
-                    android:textColor="@color/text_primary"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:layout_marginBottom="12dp"/>
@@ -139,14 +139,14 @@
                             android:layout_height="wrap_content"
                             android:text="Comprar Productos"
                             android:textStyle="bold"
-                            android:textColor="@color/text_primary"
+                            android:textColor="@color/black"
                             android:textSize="16sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Explora nuestro catálogo completo"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="@color/black"
                             android:textSize="13sp"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -173,14 +173,14 @@
                             android:layout_height="wrap_content"
                             android:text="Validar Receta"
                             android:textStyle="bold"
-                            android:textColor="@color/text_primary"
+                            android:textColor="@color/black"
                             android:textSize="16sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sube tu receta médica fácilmente"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="@color/black"
                             android:textSize="13sp"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -207,14 +207,14 @@
                             android:layout_height="wrap_content"
                             android:text="Mis Pedidos"
                             android:textStyle="bold"
-                            android:textColor="@color/text_primary"
+                            android:textColor="@color/black"
                             android:textSize="16sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Rastrea tu pedido en tiempo real"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="@color/black"
                             android:textSize="13sp"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -241,14 +241,14 @@
                             android:layout_height="wrap_content"
                             android:text="Habla con un Farmacéutico"
                             android:textStyle="bold"
-                            android:textColor="@color/text_primary"
+                            android:textColor="@color/black"
                             android:textSize="16sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Consulta tus dudas ahora"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="@color/black"
                             android:textSize="13sp"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
