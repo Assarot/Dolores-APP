@@ -13,12 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:src="@drawable/circle_background2"
-        tools:layout_editor_absoluteX="-91dp"
-        tools:layout_editor_absoluteY="-46dp" />
+        tools:layout_editor_absoluteX="-99dp"
+        tools:layout_editor_absoluteY="-71dp" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
         android:layout_centerInParent="true"
         android:src="@drawable/circle_background"
         tools:layout_editor_absoluteX="16dp"

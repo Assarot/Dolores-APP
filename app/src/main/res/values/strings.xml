@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">DoloresApp</string>
-    <string name="accede">ACCEDE</string>
+    <string name="accede">Acccede</string>
     <string name="title1">TUS DOLORES TIENE NOMBRE</string>
     <string name="title2">Y TAMBIEN SOLUCION</string>
+    <string name="title3">Bienvenido A Tu Farmacia De Confianza</string>
+    <string name="title3.1">Dolores Tu Mejor Opción</string>
+    <string name="name">Ingresa Tus Nombres</string>
+    <string name="lastname">Ingresa Tus Apellidos</string>
+    <string name="gender">Seleccione Su Genero</string>
+    <string name="dni">Ingresa El Número De DNI</string>
+    <string name="phone">Ingresa El Número De Celular</string>
+    <string name="next">Avanza</string>
+    <string name="register">Registrate</string>
+    <string name="enter">Ingresa</string>
+
 </resources>
