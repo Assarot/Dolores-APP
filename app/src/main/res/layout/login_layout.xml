@@ -7,6 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/login_circle_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -16,6 +17,7 @@
 
 
     <ImageView
+        android:id="@+id/login_circle_front"
         android:layout_width="135dp"
         android:layout_height="135dp"
         android:layout_centerInParent="true"
@@ -32,18 +34,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.18" />
+
+    <!-- Título pequeño para dar contexto -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicia sesión"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/dolores"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name_input_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:boxBackgroundMode="outline"
         app:boxStrokeColor="@color/gray_light"
-        app:boxBackgroundMode="none"
         app:hintEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -62,11 +80,15 @@
         android:id="@+id/lastname_input_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
         app:endIconMode="password_toggle"
         app:layout_constraintTop_toBottomOf="@+id/name_input_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:hintEnabled="true">
+        app:hintEnabled="true"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/gray_light">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_input"
@@ -85,21 +107,24 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/acceder_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="14dp"
         android:text="@string/enter"
+        android:textAllCaps="false"
         app:backgroundTint="@color/principal"
         app:cornerRadius="16dp"
         app:layout_constraintTop_toBottomOf="@+id/lastname_input_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.1"/>
+        app:layout_constraintHorizontal_bias="0.5"/>
 
     <!-- Mensaje debajo del botón -->
     <TextView
         android:id="@+id/login_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/login_message_text"
         app:layout_constraintTop_toBottomOf="@+id/acceder_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,6 +135,7 @@
         android:id="@+id/login_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="@string/login_link_text"
         android:textColor="@color/ingresa"
         android:textStyle="bold"
