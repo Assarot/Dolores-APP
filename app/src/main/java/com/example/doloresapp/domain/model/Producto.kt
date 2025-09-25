@@ -1,5 +1,8 @@
 package com.example.doloresapp.domain.model
 
+import com.example.doloresapp.data.remote.dto.CategoriaDTO
+import com.example.doloresapp.data.remote.dto.ProductoDTO
+
 data class Producto(
     val id: Int,
     val nombre: String,
@@ -16,8 +19,18 @@ data class Categoria(
     val nombre: String
 )
 
-interface ProductoRepository {
-    suspend fun getProductos(): List<Producto>
-    suspend fun getCategorias(): List<Categoria>
-    suspend fun searchProductos(query: String): List<Producto>
-}
+fun ProductoDTO.toDomain() = Producto(
+    id = this.id,
+    nombre = this.nombre,
+    descripcion = this.descripcion,
+    precio = this.precio,
+    precioOferta = this.precioOferta,
+    imagenUrl = this.imagenUrl,
+    stock = this.stock,
+    categoriaId = this.categoriaId
+)
+
+fun CategoriaDTO.toDomain() = Categoria(
+    id = this.id,
+    nombre = this.nombre
+)
