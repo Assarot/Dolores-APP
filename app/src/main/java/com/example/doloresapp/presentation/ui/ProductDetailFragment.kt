@@ -33,7 +33,7 @@ class ProductDetailFragment : Fragment(R.layout.libraryproduct_layout) {
         // Bind basic fields
         view.findViewById<TextView>(R.id.productTitle)?.text = p.nombre
         view.findViewById<TextView>(R.id.descriptionText)?.text = p.descripcion
-        view.findViewById<TextView>(R.id.concentrationText)?.text = ""
+        view.findViewById<TextView>(R.id.concentrationText)?.text = p.concentracion
         view.findViewById<TextView>(R.id.stockText)?.text = "${p.stock} disponibles"
         // If you load images from URL, integrate Glide/Picasso here with p.imagenUrl
         view.findViewById<ImageView>(R.id.productImage)?.setImageResource(R.drawable.ic_medication)
