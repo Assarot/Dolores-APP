@@ -18,6 +18,14 @@
     <string name="password_hint">Ingresa tu contraseña</string>
     <string name="login_message_text">¿Ya te registraste antes? </string>
     <string name="login_link_text">Ingresa</string>
+    <string name="birthdate_hint">Ingresa tu fecha de nacimiento (AAAA-MM-DD)</string>
+    <string name="create_password_hint">Crea una contraseña segura</string>
+    <string name="confirm_password_hint">Confirma tu contraseña</string>
+    <string name="error_email_required">El correo es obligatorio</string>
+    <string name="error_email_invalid">El correo no es válido</string>
+    <string name="error_password_required">La contraseña es obligatoria</string>
+    <string name="error_password_length">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_password_mismatch">Las contraseñas no coinciden</string>
     <string-array name="gender_options">
         <item>Femenino</item>
         <item>Masculino</item>
