@@ -117,7 +117,7 @@
                     android:text="Jarabe para la tos"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/stockText"
@@ -126,7 +126,7 @@
                     android:text="2 disponibles"
                     android:textSize="14sp"
                     android:textColor="@color/principal"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <!-- Descripción -->
@@ -149,7 +149,7 @@
                         android:text="Descripción"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:textColor="@color/dolores"/>
+                        android:textColor="@color/dolores" />
 
                     <TextView
                         android:id="@+id/descriptionText"
@@ -261,7 +261,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:backgroundTint="@color/principal"
-                android:icon="@drawable/ic_add_circle"
+                app:icon="@drawable/ic_add_circle"
+                app:iconPadding="8dp"
                 android:text="Añadir"
                 android:textAllCaps="false"
                 android:textColor="@color/white"

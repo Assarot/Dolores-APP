@@ -7,7 +7,10 @@ import android.util.Patterns
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.doloresapp.data.local.TokenStore
 import com.example.doloresapp.data.remote.NetworkClient
@@ -34,11 +37,20 @@ class RegisterActivity : AppCompatActivity() {
         TokenStore.init(applicationContext)
         NetworkClient.init(applicationContext)
 
+        // Habilita edge-to-edge para ocupar toda la pantalla respetando los system bars
+        enableEdgeToEdge()
+
         showStep1()
     }
 
     private fun showStep1() {
         setContentView(R.layout.register_1_layout)
+        // Aplica padding según los system bars al root del paso 1
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.register_root_step1)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         val nameInput: TextInputEditText = findViewById(R.id.name)
         val lastnameInput: TextInputEditText = findViewById(R.id.lastname)
@@ -116,6 +128,12 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun showStep2() {
         setContentView(R.layout.register_2_layout)
+        // Aplica padding según los system bars al root del paso 2
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.register_root_step2)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         val emailInput: TextInputEditText = findViewById(R.id.email_input)
         val passwordInput: TextInputEditText = findViewById(R.id.password_input)
