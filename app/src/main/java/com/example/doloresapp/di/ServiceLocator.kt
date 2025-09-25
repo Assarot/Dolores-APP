@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ServiceLocator {
     // TODO: Cambia esta baseUrl a la de tu API cuando esté lista
-    private const val BASE_URL = "http://10.0.2.2:8080/"
+    private const val BASE_URL = "http://192.168.0.45:8090/"
 
     @Volatile
     private var retrofit: Retrofit? = null
