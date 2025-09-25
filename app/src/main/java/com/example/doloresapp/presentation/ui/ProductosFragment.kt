@@ -106,6 +106,15 @@ class ProductosFragment : Fragment(R.layout.listproducts_layout) {
             }
         }
 
+        // Click en "Mis Pedidos" -> navegar al CartFragment (carrito)
+        view.findViewById<View>(R.id.cart_fab)?.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragment_container, CartFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
         // Llamar a los métodos para cargar productos y categorías
         Log.d("ProductosFragment", "Solicitando carga de productos y categorias...")
         productosViewModel.loadProductos()  // Cargar productos

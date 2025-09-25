@@ -6,12 +6,12 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface ProductoApiService {
-    @GET("productos")
+    @GET("api/productos")
     suspend fun getProductos(): List<ProductoDTO>
 
-    @GET("categorias")
+    @GET("api/categorias")
     suspend fun getCategorias(): List<CategoriaDTO>
 
-    @GET("productos/{id}")
+    @GET("api/productos/{id}")
     suspend fun getProducto(@Path("id") id: Int): ProductoDTO
 }
