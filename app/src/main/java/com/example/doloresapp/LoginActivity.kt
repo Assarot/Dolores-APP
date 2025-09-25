@@ -3,6 +3,7 @@ package com.example.doloresapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import android.util.Patterns
@@ -49,6 +50,7 @@ class LoginActivity : AppCompatActivity() {
         val emailInput: TextInputEditText = findViewById(R.id.email_input)
         val passwordInput: TextInputEditText = findViewById(R.id.password_input)
         val loginButton: com.google.android.material.button.MaterialButton = findViewById(R.id.acceder_button)
+        val registerLink: TextView = findViewById(R.id.login_link)
 
         val api = NetworkClient.createService(LoginApi::class.java)
 
@@ -80,6 +82,11 @@ class LoginActivity : AppCompatActivity() {
                     loginButton.isEnabled = true
                 }
             }
+        }
+
+        // Ir a la pantalla de registro
+        registerLink.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 
