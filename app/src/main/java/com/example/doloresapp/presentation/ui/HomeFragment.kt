@@ -17,5 +17,14 @@ class HomeFragment : Fragment(R.layout.home_screen) {
                 .addToBackStack(null)
                 .commit()
         }
+
+        // Click en "Mis Pedidos" -> navegar al CartFragment (carrito)
+        view.findViewById<View>(R.id.cardPedidos)?.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragment_container, CartFragment())
+                .addToBackStack(null)
+                .commit()
+        }
     }
 }

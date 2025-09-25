@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doloresapp.R
 import com.example.doloresapp.presentation.viewmodel.ProductosViewModel
-import com.example.doloresapp.presentation.adapters.ProductosAdapter
+import com.example.doloresapp.presentation.adapters.EnhancedProductosAdapter
 import com.example.doloresapp.di.ServiceLocator
 import com.example.doloresapp.presentation.viewmodel.ProductosViewModelFactory
 import android.util.Log
@@ -21,6 +21,7 @@ import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import com.example.doloresapp.domain.model.Producto
 import android.view.ViewGroup
+import com.example.doloresapp.data.cart.CartRepository
 
 class ProductosFragment : Fragment(R.layout.listproducts_layout) {
     private val productosViewModel: ProductosViewModel by viewModels {
@@ -30,16 +31,32 @@ class ProductosFragment : Fragment(R.layout.listproducts_layout) {
         )
     }
 
-    private lateinit var adapter: ProductosAdapter
+
+    private fun openProductDetail(producto: Producto) {
+        val fragment = ProductDetailFragment.newInstance(producto)
+        requireActivity().supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    private lateinit var adapter: EnhancedProductosAdapter
     private var allProducts: List<Producto> = emptyList()
     private var selectedCategoryId: Int? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
         Log.d("ProductosFragment", "onViewCreated(): iniciado")
         // Configuración del RecyclerView
-        adapter = ProductosAdapter(emptyList())
+        adapter = EnhancedProductosAdapter(
+            productos = emptyList(),
+            onItemClick = { producto -> openProductDetail(producto) },
+            onAddToCartClick = { producto ->
+                CartRepository.add(producto)
+                Toast.makeText(requireContext(), "Añadido al carrito", Toast.LENGTH_SHORT).show()
+            }
+        )
         val recyclerView: RecyclerView = view.findViewById(R.id.products_recyclerview)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter

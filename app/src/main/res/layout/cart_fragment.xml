@@ -101,8 +101,7 @@
                             android:layout_height="wrap_content"
                             android:text="Antes: $9.20"
                             android:textColor="#757575"
-                            android:textSize="12sp"
-                            android:paintFlags="strikeThruText"/>
+                            android:textSize="12sp"/>
 
                         <TextView
                             android:id="@+id/price"

@@ -2,6 +2,7 @@ package com.example.doloresapp.domain.model
 
 import com.example.doloresapp.data.remote.dto.CategoriaDTO
 import com.example.doloresapp.data.remote.dto.ProductoDTO
+import java.io.Serializable
 
 data class Producto(
     val id: Int,
@@ -12,7 +13,7 @@ data class Producto(
     val imagenUrl: String?,
     val stock: Int,
     val categoriaId: Int
-)
+) : Serializable
 
 data class Categoria(
     val id: Int,
