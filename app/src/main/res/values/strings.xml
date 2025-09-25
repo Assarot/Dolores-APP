@@ -13,6 +13,11 @@
     <string name="next">Avanza</string>
     <string name="register">Registrate</string>
     <string name="enter">Ingresa</string>
+    <string name="email_hint">Ingresa tu correo</string>
+    <string name="username_hint">Ingresa tu usuario</string>
+    <string name="password_hint">Ingresa tu contraseña</string>
+    <string name="login_message_text">¿Ya te registraste antes? </string>
+    <string name="login_link_text">Ingresa</string>
     <string-array name="gender_options">
         <item>Femenino</item>
         <item>Masculino</item>
